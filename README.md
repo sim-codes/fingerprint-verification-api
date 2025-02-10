@@ -21,8 +21,9 @@ A .NET Core Web API that provides fingerprint verification capabilities using th
 
 1. Clone the repository
    ```bash
-   git clone 
-   cd 
+   git clone https://github.com/sim-codes/fingerprint-verification-api.git
+
+   cd fingerprint-verification-api
    ```
 2. Install the required NuGet packages:
    ```bash
