@@ -25,8 +25,8 @@ namespace FingerPrintApplication.Controllers
         /// <response code="500">If there was an internal server error during verification</response>
         [HttpPost("verify", Name = "VerifyFingerprints")]
         [ProducesResponseType(typeof(VerificationResult), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(VerificationResult), StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(typeof(VerificationResult), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> VerifyFingerPrint([FromBody] FingerDto fingerDto)
         {
             if (string.IsNullOrEmpty(fingerDto.SavedFingerUrl) || string.IsNullOrEmpty(fingerDto.UserFingerUrl))
