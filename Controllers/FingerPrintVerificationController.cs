@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace FingerPrintApplication.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api")]
     public class FingerPrintVerificationController : ControllerBase
     {
         private readonly IFingerPrintService _fingerPrintService;

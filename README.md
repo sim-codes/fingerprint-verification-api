@@ -43,7 +43,7 @@ A .NET Core Web API that provides fingerprint verification capabilities using th
 
 ### Verify Fingerprint
 
-**Endpoint:** `POST /FingerPrintVerification/verify`
+**Endpoint:** `POST /api/verify`
 
 Compares two fingerprint images and returns a matching result.
 
@@ -111,7 +111,7 @@ var request = new FingerDto
     UserFingerUrl = "https://example.com/user-fingerprint.jpg"
 };
 
-var response = await httpClient.PostAsJsonAsync("api/FingerPrintVerification/verify", request);
+var response = await httpClient.PostAsJsonAsync("/api/verify", request);
 var result = await response.Content.ReadFromJsonAsync<VerificationResult>();
 ```
 
